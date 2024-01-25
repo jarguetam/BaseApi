@@ -42,6 +42,7 @@ namespace BaseApi.WebApi
             );
 
             // Registro de servicios mediante inyección de dependencias
+            services.AddScoped<HanaDbContext>();
             services.AddTransient<AuthService, AuthService>();
             services.AddTransient<UserService, UserService>();
             services.AddTransient<CommonService, CommonService>();

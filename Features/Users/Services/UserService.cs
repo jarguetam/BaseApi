@@ -7,6 +7,7 @@ using BaseApi.WebApi.Features.Common.Entities;
 using BaseApi.WebApi.Infraestructure;
 using Microsoft.Extensions.Configuration;
 using BaseApi.WebApi.Helpers;
+using Sap.Data.Hana;
 
 namespace BaseApi.WebApi.Features.Users
 {
@@ -14,10 +15,13 @@ namespace BaseApi.WebApi.Features.Users
     {
         private readonly BaseApiDbContext _baseApiDbContext;
         private readonly IConfiguration _configuration;
-        public UserService(BaseApiDbContext logisticaBtdDbContext, IConfiguration configuration)
+        private readonly HanaDbContext _hanaDbContext;
+
+        public UserService(BaseApiDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext)
         {
-            _baseApiDbContext = logisticaBtdDbContext;
+            _baseApiDbContext = baseApiDbContext;
             _configuration = configuration;
+            _hanaDbContext = hanaDbContext;         
         }
 
         public List<UserDto> Get()
@@ -85,5 +89,23 @@ namespace BaseApi.WebApi.Features.Users
             var themes = _baseApiDbContext.Theme.ToList();
             return themes;
         }
+
+        public List<string> GetSellersSAP()
+        {
+            List<string> result = new List<string>();
+            _hanaDbContext.Conn.Open();
+            string query = $@"SELECT ""SlpName"" FROM ""FERTICA_PRD"".""OSLP"" WHERE ""U_OS_CODIGO"" IS NOT NULL";
+            HanaCommand selectCmd = new HanaCommand(query, _hanaDbContext.Conn);
+            HanaDataReader dr = selectCmd.ExecuteReader();
+            while (dr.Read())
+            {
+                string slpName = dr.GetString(0);
+                result.Add(slpName);
+            }
+            dr.Close();
+            _hanaDbContext.Conn.Close();
+            return result;
+        }
+
     }
 }

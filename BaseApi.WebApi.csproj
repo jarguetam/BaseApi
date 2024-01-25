@@ -53,4 +53,11 @@
     <Folder Include="Features\Mails\" />
     <Folder Include="Features\Mails\Dto\" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <Reference Include="Sap.Data.Hana.v4.5">
+      <HintPath>..\..\..\Users\josue.argueta\OneDrive - Grupo Cadelga\Documentos\Dll\Sap.Data.Hana.v4.5.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

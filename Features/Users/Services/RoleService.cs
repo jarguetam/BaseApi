@@ -121,9 +121,6 @@ namespace BaseApi.WebApi.Features.Users
             return Get();
         }
 
-    
-
-
         public List<Role> Edit(RoleDto role)
         {
             try
