@@ -66,12 +66,14 @@ namespace BaseApi.WebApi.Features.Users
             }).ToList();
 
             return role;
-        } 
+        }
 
         public List<TreeNodeDto> GenerateChildren(List<PermissionDto> permissions, List<PermissionDto> originalPermissions)
         {
+            // Inicializa una lista para almacenar los nodos generados
             var data = permissions.Select(x => new TreeNodeDto
             {
+                // Asigna las propiedades del nodo TreeNodeDto
                 Icon = x.Icon,
                 Label = x.Description,
                 PermissionId = x.PermissionId,
@@ -82,11 +84,17 @@ namespace BaseApi.WebApi.Features.Users
                 TypeId = x.TypeId,
                 Active = x.Active,
                 PositionId = x.Position,
+                // La propiedad Children se inicializa llamando recursivamente GenerateChildren
                 Children = GenerateChildren(originalPermissions.Where(c => c.FatherId == x.PermissionId).ToList(), originalPermissions).Count() == 0
-                ? null : GenerateChildren(originalPermissions.Where(c => c.FatherId == x.PermissionId).ToList(), originalPermissions)
+                    ? null  // Si no hay hijos, se establece en null
+                    : GenerateChildren(originalPermissions.Where(c => c.FatherId == x.PermissionId).ToList(), originalPermissions)
+                // Si hay hijos, se llama recursivamente a GenerateChildren para obtener los hijos
             }).ToList();
+
+            // Devuelve la lista de nodos generados
             return data;
         }
+
 
 
         public List<Role> Add(RoleDto role)
@@ -127,7 +135,6 @@ namespace BaseApi.WebApi.Features.Users
             {
                 if (role.IsValid())
                 {
-
                     _baseApiDbContext.Database.BeginTransaction();
                     var permissionIds = Helper.TreeNodeToList(role.Detail);
                     var permissionsActive = permissionIds.Where(x => x.Active).ToList();

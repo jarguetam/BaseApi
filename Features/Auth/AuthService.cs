@@ -36,7 +36,7 @@ namespace BaseApi.WebApi.Features.Auth
                 .Where(x => x.UserName.ToUpper() == User.UserName && x.Password == User.Password)
                 .FirstOrDefault();
 
-            // Se realizan algunas validaciones
+            // Se realizan validaciones
             if (employee == null) throw new Exception("Usuario o contraseña incorrecta.");
             if (!employee.Active) throw new Exception("Usuario Inactivo.");
 

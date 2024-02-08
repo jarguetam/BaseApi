@@ -92,7 +92,6 @@ namespace BaseApi.WebApi.Helpers
                 // Cerramos el MemoryStream
                 memoria.Close();
             }
-
             // Convertimos la contraseña cifrada a Base64 y la devolvemos
             return Convert.ToBase64String(contrasenaFinal);
         }

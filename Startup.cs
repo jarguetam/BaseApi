@@ -63,14 +63,14 @@ namespace BaseApi.WebApi
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "AgromoneyAppApi v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BaseApiApi v1"));
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            //Habilitamos los cords para usar en la web OJO Solo en pruebas en produccion hay que especificiar el origen
+            //Habilitamos los cors para usar en la web OJO Solo en pruebas en produccion hay que especificiar el origen
             app.UseCors(x => x
               .AllowAnyOrigin()
               .AllowAnyMethod()
