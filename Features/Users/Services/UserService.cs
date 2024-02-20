@@ -8,6 +8,8 @@ using BaseApi.WebApi.Infraestructure;
 using Microsoft.Extensions.Configuration;
 using BaseApi.WebApi.Helpers;
 using Sap.Data.Hana;
+using BaseApi.WebApi.Features.ServiceLayer;
+using BaseApi.WebApi.Features.ServiceLayer.Dto;
 
 namespace BaseApi.WebApi.Features.Users
 {
@@ -16,12 +18,16 @@ namespace BaseApi.WebApi.Features.Users
         private readonly BaseApiDbContext _baseApiDbContext;
         private readonly IConfiguration _configuration;
         private readonly HanaDbContext _hanaDbContext;
+        private readonly AuthSapServices _authSapService;
+        private readonly OrderPurchaseServices _orderPurchaseServices;
 
-        public UserService(BaseApiDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext)
+        public UserService(BaseApiDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext, AuthSapServices authSapService, OrderPurchaseServices orderPurchaseServices)
         {
             _baseApiDbContext = baseApiDbContext;
             _configuration = configuration;
-            _hanaDbContext = hanaDbContext;         
+            _hanaDbContext = hanaDbContext;
+            _authSapService = authSapService;
+            _orderPurchaseServices = orderPurchaseServices;
         }
 
         public List<UserDto> Get()
@@ -80,7 +86,11 @@ namespace BaseApi.WebApi.Features.Users
             currentUser.RoleId = user.RoleId;
             currentUser.ThemeId = user.ThemeId;
             currentUser.Active = user.Active;
+<<<<<<< HEAD
+            _baseApiDbContext.User.Update(currentUser);
+=======
             currentUser.Password = user.Password;
+>>>>>>> 7d6f00e (Refactorizado)
             _baseApiDbContext.SaveChanges();
             return Get();
         }
@@ -95,7 +105,7 @@ namespace BaseApi.WebApi.Features.Users
         {
             List<string> result = new List<string>();
             _hanaDbContext.Conn.Open();
-            string query = $@"SELECT ""SlpName"" FROM ""FERTICA_PRD"".""OSLP"" WHERE ""U_OS_CODIGO"" IS NOT NULL";
+            string query = $@"SELECT ""SlpName"" FROM ""TEST_CHAMER"".""OSLP"" ";
             HanaCommand selectCmd = new HanaCommand(query, _hanaDbContext.Conn);
             HanaDataReader dr = selectCmd.ExecuteReader();
             while (dr.Read())
@@ -107,6 +117,8 @@ namespace BaseApi.WebApi.Features.Users
             _hanaDbContext.Conn.Close();
             return result;
         }
+
+ 
 
     }
 }

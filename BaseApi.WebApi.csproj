@@ -56,8 +56,11 @@
 
 
   <ItemGroup>
-    <Reference Include="Sap.Data.Hana.v4.5">
-      <HintPath>..\..\..\Users\josue.argueta\OneDrive - Grupo Cadelga\Documentos\Dll\Sap.Data.Hana.v4.5.dll</HintPath>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\..\Downloads\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Sap.Data.Hana.Core.v2.1">
+      <HintPath>Sap.Data.Hana.Core.v2.1.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

@@ -6,6 +6,7 @@ namespace DBaseApi.Features.Auth.Dto
 {
     public class UserDto : User
     {
+        public string CreatedByName { get; set; }
         public string Theme { get; set; }
         public string Role { get; set; }
         public List<Permission> Permissions { get; set; }
