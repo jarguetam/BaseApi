@@ -86,11 +86,9 @@ namespace BaseApi.WebApi.Features.Users
             currentUser.RoleId = user.RoleId;
             currentUser.ThemeId = user.ThemeId;
             currentUser.Active = user.Active;
-<<<<<<< HEAD
+
             _baseApiDbContext.User.Update(currentUser);
-=======
             currentUser.Password = user.Password;
->>>>>>> 7d6f00e (Refactorizado)
             _baseApiDbContext.SaveChanges();
             return Get();
         }

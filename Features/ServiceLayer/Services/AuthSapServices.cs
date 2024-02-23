@@ -66,7 +66,7 @@ namespace BaseApi.WebApi.Features.ServiceLayer
 
                 return true;
             }
-            catch ()
+            catch
             {
                 throw;
             }
