@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using ApiChatbot.WebApi.Features.Common.Dto;
-using ApiChatbot.WebApi.Features.Common.Entities;
-using ApiChatbot.WebApi.Helpers;
-using ApiChatbot.WebApi.Infraestructure;
+using BaseApi.WebApi.Features.Common.Dto;
+using BaseApi.WebApi.Features.Common.Entities;
+using BaseApi.WebApi.Helpers;
+using BaseApi.WebApi.Infraestructure;
 using Microsoft.AspNetCore.Http;
 
-namespace ApiChatbot.WebApi.Features.Common
+namespace BaseApi.WebApi.Features.Common
 {
     public class CommonService
     {
-        private readonly ApiChatbotDbContext _baseApiDbContext;
-        public CommonService(ApiChatbotDbContext logisticaBtdDbContext)
+        private readonly BaseApiDbContext _baseApiDbContext;
+        public CommonService(BaseApiDbContext logisticaBtdDbContext)
         {
             _baseApiDbContext = logisticaBtdDbContext;
         }

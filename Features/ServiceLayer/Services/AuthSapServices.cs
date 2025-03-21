@@ -1,4 +1,4 @@
-﻿using ApiChatbot.WebApi.Features.ServiceLayer.Dto;
+﻿using BaseApi.WebApi.Features.ServiceLayer.Dto;
 using RestSharp;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 
-namespace ApiChatbot.WebApi.Features.ServiceLayer
+namespace BaseApi.WebApi.Features.ServiceLayer
 {
     public class AuthSapServices
     {

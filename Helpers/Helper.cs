@@ -1,4 +1,4 @@
-﻿using ApiChatbot.WebApi.Features.Users.Dto;
+﻿using BaseApi.WebApi.Features.Users.Dto;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ApiChatbot.WebApi.Helpers
+namespace BaseApi.WebApi.Helpers
 {
     public static class Helper
     {

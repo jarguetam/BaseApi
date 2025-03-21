@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ApiChatbot.WebApi.Features.Users.Entities
+namespace BaseApi.WebApi.Features.Users.Entities
 {
     public class Permission
     {

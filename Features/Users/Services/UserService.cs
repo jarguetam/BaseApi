@@ -1,32 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DApiChatbot.Features.Auth.Dto;
-using ApiChatbot.WebApi.Features.Users.Entities;
-using ApiChatbot.WebApi.Features.Common.Entities;
-using ApiChatbot.WebApi.Infraestructure;
+using DBaseApi.Features.Auth.Dto;
+using BaseApi.WebApi.Features.Users.Entities;
+using BaseApi.WebApi.Features.Common.Entities;
+using BaseApi.WebApi.Infraestructure;
 using Microsoft.Extensions.Configuration;
-using ApiChatbot.WebApi.Helpers;
+using BaseApi.WebApi.Helpers;
 using Sap.Data.Hana;
-using ApiChatbot.WebApi.Features.ServiceLayer;
-using ApiChatbot.WebApi.Features.ServiceLayer.Dto;
+using BaseApi.WebApi.Features.ServiceLayer;
+using BaseApi.WebApi.Features.ServiceLayer.Dto;
 
-namespace ApiChatbot.WebApi.Features.Users
+namespace BaseApi.WebApi.Features.Users
 {
     public class UserService
     {
-        private readonly ApiChatbotDbContext _baseApiDbContext;
+        private readonly BaseApiDbContext _baseApiDbContext;
         private readonly IConfiguration _configuration;
         private readonly HanaDbContext _hanaDbContext;
         private readonly AuthSapServices _authSapService;
+        private readonly OrderPurchaseServices _orderPurchaseServices;
 
-        public UserService(ApiChatbotDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext, AuthSapServices authSapService)
+        public UserService(BaseApiDbContext baseApiDbContext, IConfiguration configuration, HanaDbContext hanaDbContext, AuthSapServices authSapService, OrderPurchaseServices orderPurchaseServices)
         {
             _baseApiDbContext = baseApiDbContext;
             _configuration = configuration;
             _hanaDbContext = hanaDbContext;
             _authSapService = authSapService;
-  
+            _orderPurchaseServices = orderPurchaseServices;
         }
 
         public List<UserDto> Get()

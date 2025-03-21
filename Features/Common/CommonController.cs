@@ -1,12 +1,12 @@
 ﻿using System;
-using ApiChatbot.WebApi.Features.Common.Entities;
-using ApiChatbot.WebApi.Helpers;
+using BaseApi.WebApi.Features.Common.Entities;
+using BaseApi.WebApi.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 
-namespace ApiChatbot.WebApi.Features.Common
+namespace BaseApi.WebApi.Features.Common
 {
     [Route("api/[controller]")]
     [ApiController]

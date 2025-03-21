@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiChatbot.WebApi.Helpers
+namespace BaseApi.WebApi.Helpers
 {
     public static class ConvertNumberToText
     {

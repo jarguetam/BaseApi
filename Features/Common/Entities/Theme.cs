@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace ApiChatbot.WebApi.Features.Common.Entities
+namespace BaseApi.WebApi.Features.Common.Entities
 {
     public class Theme
     {

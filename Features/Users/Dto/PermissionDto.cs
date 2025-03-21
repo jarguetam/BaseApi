@@ -1,7 +1,7 @@
 ﻿using System;
-using ApiChatbot.WebApi.Features.Users.Entities;
+using BaseApi.WebApi.Features.Users.Entities;
 
-namespace ApiChatbot.WebApi.Features.Users.Dto
+namespace BaseApi.WebApi.Features.Users.Dto
 {
     public class PermissionDto: Permission
     {

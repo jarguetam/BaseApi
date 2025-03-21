@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace ApiChatbot.WebApi
+namespace BaseApi.WebApi
 {
     public class Program
     {

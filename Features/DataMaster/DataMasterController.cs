@@ -1,4 +1,4 @@
-﻿using ApiChatbot.WebApi.Features.DataMaster.Services;
+﻿using BaseApi.WebApi.Features.DataMaster.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiChatbot.WebApi.Features.DataMaster
+namespace BaseApi.WebApi.Features.DataMaster
 {
     [Route("api/[controller]")]
     [ApiController]

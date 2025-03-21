@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiChatbot.WebApi.Features.DataMaster.Dto
+namespace BaseApi.WebApi.Features.DataMaster.Dto
 {
     public class DataMasterDto
     {

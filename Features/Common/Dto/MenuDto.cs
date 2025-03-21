@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ApiChatbot.WebApi.Features.Common.Dto
+namespace BaseApi.WebApi.Features.Common.Dto
 {
     public class MenuDto
     {
