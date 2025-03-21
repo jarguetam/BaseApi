@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BaseApi.WebApi.Features.TypeDocuments.Entities
+namespace ApiChatbot.WebApi.Features.TypeDocuments.Entities
 {
 	public class TypeDocument
 	{

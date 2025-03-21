@@ -1,7 +1,7 @@
 ﻿
 using System.Collections.Generic;
 
-namespace BaseApi.WebApi.Features.Users.Dto
+namespace ApiChatbot.WebApi.Features.Users.Dto
 {
     public class TreeNodeDto
     {

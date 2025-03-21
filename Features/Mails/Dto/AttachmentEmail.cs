@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BaseApi.WebApi.Features.Mails.Dto
+namespace ApiChatbot.WebApi.Features.Mails.Dto
 {
     public class AttachmentEmail
     {

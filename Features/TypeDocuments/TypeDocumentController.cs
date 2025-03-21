@@ -1,5 +1,5 @@
-﻿using BaseApi.WebApi.Features.TypeDocuments.Entities;
-using BaseApi.WebApi.Features.TypeDocuments.Services;
+﻿using ApiChatbot.WebApi.Features.TypeDocuments.Entities;
+using ApiChatbot.WebApi.Features.TypeDocuments.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BaseApi.WebApi.Features.TypeDocuments
+namespace ApiChatbot.WebApi.Features.TypeDocuments
 {
     [Route("api/[controller]")]
     [ApiController]

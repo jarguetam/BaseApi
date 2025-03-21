@@ -1,5 +1,5 @@
 ﻿using System;
-namespace BaseApi.WebApi.Helpers
+namespace ApiChatbot.WebApi.Helpers
 {
     public enum TypePermissionEnum : int
     {

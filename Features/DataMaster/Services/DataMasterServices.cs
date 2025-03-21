@@ -1,12 +1,9 @@
-﻿using BaseApi.WebApi.Features.DataMaster.Dto;
-using BaseApi.WebApi.Infraestructure;
+﻿using ApiChatbot.WebApi.Features.DataMaster.Dto;
+using ApiChatbot.WebApi.Infraestructure;
 using Sap.Data.Hana;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace BaseApi.WebApi.Features.DataMaster.Services
+namespace ApiChatbot.WebApi.Features.DataMaster.Services
 {
     public class DataMasterServices
     {
@@ -21,7 +18,7 @@ namespace BaseApi.WebApi.Features.DataMaster.Services
         {
             List<DataMasterDto> supplierList = new List<DataMasterDto>();
             _context.Conn.Open();
-            string query = $@"SELECT T0.""CardCode"", T0.""CardName"" FROM ""PRUEBAS_INTERCOSMO"".""OCRD"" T0 WHERE T0.""CardType"" ='S' AND  T0.""CardCode"" LIKE 'PN%'";
+            string query = $@"SELECT T0.""CardCode"", T0.""CardName"" FROM ""FERTICA_TEST"".""OCRD"" T0 WHERE T0.""CardType"" ='S' AND  T0.""CardCode"" LIKE 'PN%'";
             HanaCommand selectCmd = new HanaCommand(query, _context.Conn);
             HanaDataReader dr = selectCmd.ExecuteReader();
             while (dr.Read())
@@ -42,7 +39,7 @@ namespace BaseApi.WebApi.Features.DataMaster.Services
         {
             List<DataMasterDto> itemsList = new List<DataMasterDto>();          
             _context.Conn.Open();
-            string query = $@"SELECT T0.""ItemCode"", T0.""ItemName"" FROM ""PRUEBAS_INTERCOSMO"".""OITM"" T0 WHERE T0.""ItemCode"" LIKE 'P%'";
+            string query = $@"SELECT T0.""ItemCode"", T0.""ItemName"" FROM ""FERTICA_TEST"".""OITM"" T0 WHERE T0.""ItemCode"" LIKE 'P%'";
             HanaCommand selectCmd = new HanaCommand(query, _context.Conn);
             HanaDataReader dr = selectCmd.ExecuteReader();
             while (dr.Read())

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BaseApi.WebApi.Features.Users.Dto;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Helpers;
-using BaseApi.WebApi.Infraestructure;
+using ApiChatbot.WebApi.Features.Users.Dto;
+using ApiChatbot.WebApi.Features.Users.Entities;
+using ApiChatbot.WebApi.Helpers;
+using ApiChatbot.WebApi.Infraestructure;
 
-namespace BaseApi.WebApi.Features.Users
+namespace ApiChatbot.WebApi.Features.Users
 {
     public class RoleService
     {
-        private readonly BaseApiDbContext _baseApiDbContext;
-        public RoleService(BaseApiDbContext logisticaBtdDbContext)
+        private readonly ApiChatbotDbContext _baseApiDbContext;
+        public RoleService(ApiChatbotDbContext logisticaBtdDbContext)
         {
             _baseApiDbContext = logisticaBtdDbContext;
         }

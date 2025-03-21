@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 
-namespace BaseApi.WebApi.Common.Test
+namespace ApiChatbot.WebApi.Common.Test
 {
     [ApiController]
     [Route("[controller]")]

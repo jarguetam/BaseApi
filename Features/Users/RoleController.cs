@@ -1,9 +1,9 @@
 ﻿using System;
-using BaseApi.WebApi.Features.Users.Dto;
+using ApiChatbot.WebApi.Features.Users.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BaseApi.WebApi.Features.Users
+namespace ApiChatbot.WebApi.Features.Users
 {
     [ApiController]
     [Route("[controller]")]

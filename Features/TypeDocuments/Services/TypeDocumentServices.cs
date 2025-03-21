@@ -1,18 +1,18 @@
-﻿using BaseApi.WebApi.Features.TypeDocuments.Dto;
-using BaseApi.WebApi.Features.TypeDocuments.Entities;
-using BaseApi.WebApi.Infraestructure;
+﻿using ApiChatbot.WebApi.Features.TypeDocuments.Dto;
+using ApiChatbot.WebApi.Features.TypeDocuments.Entities;
+using ApiChatbot.WebApi.Infraestructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BaseApi.WebApi.Features.TypeDocuments.Services
+namespace ApiChatbot.WebApi.Features.TypeDocuments.Services
 {
     public class TypeDocumentServices
     {
-        private readonly BaseApiDbContext _context;
+        private readonly ApiChatbotDbContext _context;
 
-        public TypeDocumentServices(BaseApiDbContext context)
+        public TypeDocumentServices(ApiChatbotDbContext context)
         {
             _context = context;
         }

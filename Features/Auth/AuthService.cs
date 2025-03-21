@@ -1,4 +1,4 @@
-﻿using DBaseApi.Features.Auth.Dto;
+﻿using DApiChatbot.Features.Auth.Dto;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -6,21 +6,19 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
-using System.Security.Cryptography;
-using System.IO;
-using BaseApi.WebApi.Infraestructure;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Features.Common.Dto;
+using ApiChatbot.WebApi.Infraestructure;
+using ApiChatbot.WebApi.Features.Users.Entities;
+using ApiChatbot.WebApi.Features.Common.Dto;
 using System.Collections.Generic;
-using BaseApi.WebApi.Helpers;
+using ApiChatbot.WebApi.Helpers;
 
-namespace BaseApi.WebApi.Features.Auth
+namespace ApiChatbot.WebApi.Features.Auth
 {
     public class AuthService
     {
-        private readonly BaseApiDbContext _baseApiDbContext;
+        private readonly ApiChatbotDbContext _baseApiDbContext;
         private readonly IConfiguration _configuration;
-        public AuthService(BaseApiDbContext logisticaBtdDbContext, IConfiguration configuration)
+        public AuthService(ApiChatbotDbContext logisticaBtdDbContext, IConfiguration configuration)
         {
             _baseApiDbContext = logisticaBtdDbContext;
             _configuration = configuration;

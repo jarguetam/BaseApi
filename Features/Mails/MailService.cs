@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using BaseApi.WebApi.Features.Common.Dto;
+using ApiChatbot.WebApi.Features.Common.Dto;
 using Microsoft.Extensions.Configuration;
 using MimeKit;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using System.Linq;
-using BaseApi.WebApi.Features.Mails.Dto;
+using ApiChatbot.WebApi.Features.Mails.Dto;
 
-namespace BaseApi.WebApi.Features.Mails
+namespace ApiChatbot.WebApi.Features.Mails
 {
     public class MailService
     {

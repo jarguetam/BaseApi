@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using BaseApi.WebApi.Features.Users.Entities;
-using BaseApi.WebApi.Features.Common.Dto;
+using ApiChatbot.WebApi.Features.Users.Entities;
+using ApiChatbot.WebApi.Features.Common.Dto;
 
-namespace DBaseApi.Features.Auth.Dto
+namespace DApiChatbot.Features.Auth.Dto
 {
     public class UserDto : User
     {

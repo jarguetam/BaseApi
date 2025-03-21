@@ -1,8 +1,8 @@
-﻿using DBaseApi.Features.Auth.Dto;
+﻿using DApiChatbot.Features.Auth.Dto;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
-namespace BaseApi.WebApi.Features.Auth
+namespace ApiChatbot.WebApi.Features.Auth
 {
     [ApiController]
     [Route("[controller]")]
